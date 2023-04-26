@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="indx.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Portifolio</title>
+  </head>
+  <body>
+    <nav>
+      <ul id="navBarList">
+        <li>
+          <a href="#home" class="actived">
+            <i class="fa-solid fa-house"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="#aboutMe">
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="#myExperience">
+            <i class="fa-solid fa-medal"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="#projects">
+            <i class="fa-solid fa-link"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>
+      </ul>
+      <span class="iconActiveBall"></span>
+    </nav>
+    <section id="home">
+      <img
+        src="./img/B8C58644-2789-44C6-ACE7-F42A5A8CF21B-removebg-preview.png"
+        alt=""
+      />
+      <div class="myName">
+        <p>Eu Sou</p>
+        <h1>Pedro</h1>
+      </div>
+      <p class="descriptionHome">Desenvolvedor Front-End</p>
+      <div class="socialIcons">
+        <a href=""><i class="fa-solid fa-envelope"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        <a href=""><i class="fa-brands fa-github"></i></a>
+      </div>
+    </section>
+    <section id="aboutMe">
+      <h1>Sobre Mim</h1>
+      <div class="rectangles">
+        <div class="rectangle one"></div>
+        <div class="rectangle two"></div>
+      </div>
+      <div class="alignDescription">
+        <div class="boxAboutMe experience">
+          <i class="fa-solid fa-lightbulb"></i>
+          <h4>Experiencia</h4>
+          <p>3 Meses</p>
+        </div>
+        <div class="boxAboutMe projects">
+          <i class="fa-solid fa-file"></i>
+          <h4>Projetos</h4>
+          <p>2-Completos</p>
+        </div>
+        <p class="descriptionAboutMe">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
+          sapiente labore architecto consequuntur! Deleniti qui natus veritatis
+          quasi quis ipsa repudiandae optio, deserunt a? Vel dolorum rerum
+          nulla. Consequuntur, laudantium?
+        </p>
+        <button>Baixar cv</button>
+      </div>
+    </section>
+    <section id="myExperience">
+      <h1>My Experience</h1>
+      <div class="containerBoxExperience">
+        <div class="box front">
+          <h4>Front-End</h4>
+          <ul class="list front">
+            <li>
+              <span
+                ><img src="./img/verificado.png" alt="" />
+                <h5>HTML</h5>
+              </span>
+              <p>Experienced</p>
+            </li>
+            <li>
+              <span
+                ><img src="./img/verificado.png" alt="" />
+                <h5>CSS</h5>
+              </span>
+              <p>Experienced</p>
+            </li>
+            <li>
+              <span
+                ><img src="./img/verificado.png" alt="" />
+                <h5>JAVASCRIPT</h5>
+              </span>
+              <p>Experienced</p>
+            </li>
+            <li>
+              <span
+                ><img src="./img/verificado.png" alt="" />
+                <h5>REACT</h5>
+              </span>
+              <p>Estudando</p>
+            </li>
+          </ul>
+        </div>
+        <div class="box back">
+          <h4>Back-End</h4>
+          <ul class="list front"></ul>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <h1>Meus Projetos</h1>
+      <p>Passe o Mouse na imagem para ver a descrição do projeto</p>
+      <div class="cardsProjects">
+        <div class="cardProject">
+          <div class="imgCard" id="imgCardOne">
+            <div class="hoverDescription">
+              <p class="descriptionProject">Nesse projeto colaborativo eu adicionei um sistema de carrinho funcional. Usando HTML, CSS e JavaScript</p>
+              <div class="usedLanguages">
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-brands fa-square-js"></i>
+              </div>
+            </div>
+          </div>
+          <h4>E-commerce</h4>
+          <button id="githubBtnCard"><a target="_blank" href="https://github.com/GuilhermeJRamos/Clothes-E-commerce-Website">Github</a></button>
+          <button id="webBtnCard"><a target="_blank" href="https://guilhermejramos.github.io/Clothes-E-commerce-Website/">Website</a></button>
+        </div>
+        <div class="cardProject">
+          <div class="imgCard" id="imgCardTwo">
+            <div class="hoverDescription">
+              <p class="descriptionProject">TikTakToe(Jogo da Velha) Usando HTML,CSS e JAVASCRIPT</p>
+              <div class="usedLanguages">
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-brands fa-square-js"></i>
+              </div>
+            </div>
+          </div>
+          <h4>TikTakToe</h4>
+          <button id="githubBtnCard"><a target="_blank" href="https://github.com/pedrinhosj/TikTakToe">Github</a></button>
+          <button id="webBtnCard"><a target="_blank" href="https://github.com/pedrinhosj/TikTakToe">Website</a></button>
+        </div>
+        <div class="cardProject">
+          <div class="imgCard" id="imgCardThree">
+            <div class="hoverDescription">
+              <p class="descriptionProject">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, dolorem?</p>
+              <div class="usedLanguages">
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-brands fa-square-js"></i>
+              </div>
+            </div>
+          </div>
+          <h4>Em Desenvolvimento</h4>
+          <button id="githubBtnCard"><a target="_blank" href="#">Github</a></button>
+          <button id="webBtnCard"><a target="_blank" href="#">Website</a></button>
+        </div>
+    </section>
+    <section id="contact">
+      <h1>Contact Me</h1>
+      <form>
+        <input type="text" id="inputEmail" placeholder="Digite seu Email" />
+        <input type="text" id="inputName" placeholder="Digite seu Nome" />
+        <input type="text" id="inputMensage" placeholder="Mensagem..." />
+        <button>Enviar Email</button>
+        <div class="boxEmail">
+          <i class="fa-solid fa-envelope"></i>
+          <h5>Email</h5>
+          <p>joaopsj007@gmail.com</p>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

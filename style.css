@@ -1,0 +1,570 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --defaultColor: #00d1ff;
+  --defaultColorClear: #00d0ff86;
+  --backgroundItensColor: #00242c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Space Grotesk";
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--backgroundItensColor);
+  min-height: 100vh;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+}
+
+nav {
+  z-index: 100;
+  position: fixed;
+  min-width: 16rem;
+  height: 45px;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3px;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-color: #00d1ff;
+  overflow: hidden;
+}
+
+nav ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+  padding: 5px;
+}
+
+nav ul li a {
+  position: relative;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0px;
+}
+
+a.actived::before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 2px;
+  bottom: 0;
+  background-color: rgb(3, 22, 26);
+}
+
+a.actived i {
+  animation: iconNavAnimated 1.5s ease infinite;
+  opacity: 1;
+}
+
+@keyframes iconNavAnimated {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+nav ul li i {
+  color: var(--backgroundItensColor);
+  opacity: 0.6;
+}
+
+section {
+  padding: 100px;
+  width: 100%;
+  height: 100vh;
+  color: var(--defaultColor);
+}
+section h1 {
+  text-align: center;
+}
+section#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#home img {
+  width: 170px;
+  height: 170px;
+  border: 1px solid var(--defaultColor);
+  border-radius: 50%;
+}
+.myName {
+  line-height: 45px;
+}
+.myName p {
+  font-weight: 700;
+  font-size: 20px;
+  padding-left: 2px;
+}
+.myName h1 {
+  font-size: 70px;
+}
+.descriptionHome {
+  margin: 20px 0 0 0;
+  font-size: 20px;
+  font-weight: 100;
+  opacity: 0.5;
+  border-right: 4px solid var(--defaultColor);
+  width: 19.5ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(20), blinking 0.5s infinite step-end alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blinking {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.socialIcons {
+  min-width: 200px;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+.socialIcons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--defaultColorClear);
+  transition: 1s;
+}
+.socialIcons a i {
+  transition: 0.4s;
+}
+.socialIcons a:hover {
+  background-color: transparent;
+}
+.socialIcons a:hover i {
+  font-size: 25px;
+}
+
+section#aboutMe {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+section#aboutMe h1 {
+  grid-column: 1/4;
+  margin-bottom: 20px;
+}
+.rectangles {
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.rectangle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.one {
+  transform: rotate(15deg);
+  background-color: rgb(141, 138, 133);
+}
+.two {
+  background-image: url(./img/Captura\ de\ tela\ 2023-04-19\ 000033.png);
+  background-position: center;
+  background-size: cover;
+}
+.alignDescription {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+  width: 400px;
+  height: 400px;
+  grid-column: 3/4;
+}
+.boxAboutMe {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3px;
+  color: var(--backgroundItensColor);
+  background-color: var(--defaultColor);
+}
+.boxAboutMe i {
+  font-size: 20px;
+}
+.descriptionAboutMe {
+  grid-row: 2/3;
+  grid-column: 1/4;
+  opacity: 0.7;
+}
+.alignDescription button {
+  cursor: pointer;
+  grid-row: 3/4;
+  grid-column: 1/4;
+  width: 150px;
+  height: 50px;
+  background-color: transparent;
+  font-weight: 800;
+  color: var(--defaultColor);
+  border: 2px solid var(--defaultColor);
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+.containerBoxExperience {
+  margin-top: 20px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+  gap: 10px;
+}
+.containerBoxExperience .box {
+  width: 24rem;
+  height: 13rem;
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--backgroundItensColor);
+  background-color: var(--defaultColorClear);
+}
+.box h4 {
+  text-align: center;
+}
+.box ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  height: 90%;
+}
+.box ul li {
+  list-style: none;
+  width: 100px;
+}
+.box ul li span {
+  display: flex;
+  gap: 3px;
+}
+.box ul li span img {
+  width: 15px;
+}
+.box ul li span h5 {
+  color: white;
+}
+.box ul li p {
+  font-size: 10px;
+  color: white;
+  opacity: 0.8;
+  text-align: center;
+}
+section#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150vh;
+}
+section#projects > p {
+  padding: 0px 0 15px 0px;
+  font-weight: 800;
+  opacity: 0.6;
+}
+section#projects p {
+  text-align: center;
+}
+.cardsProjects {
+  width: 80%;
+  height: 100%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  place-items: center;
+}
+.cardProject {
+  width: 20rem;
+  height: 22rem;
+  padding: 10px;
+  color: var(--backgroundItensColor);
+  background-color: var(--defaultColor);
+  border-radius: 10px;
+}
+.imgCard {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+  background-color: var(--backgroundItensColor);
+  overflow: hidden;
+}
+#imgCardOne {
+  background-position: center;
+  background-size: cover;
+  background-image: url(./img/Opera\ Instantâneo_2023-04-25_193523_guilhermejramos.github.io.png);
+}
+#imgCardTwo {
+  background-position: center;
+  background-size: cover;
+  background-image: url(./img/Captura\ de\ tela\ 2023-04-25\ 192215.png);
+}
+.imgCard .hoverDescription {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(44, 38, 38, 0.1);
+  backdrop-filter: blur(5px);
+  top: -100%;
+  transition: 0.4s;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.imgCard:hover .hoverDescription {
+  top: 0;
+}
+@keyframes hoverCard {
+  from {
+    transform: translateY(-100%);
+  }
+}
+.hoverDescription p {
+  color: var(--backgroundItensColor);
+  text-align: start;
+  font-weight: 800;
+}
+.usedLanguages {
+  display: flex;
+  justify-content: space-around;
+}
+.usedLanguages i {
+  font-size: 30px;
+  color: var(--backgroundItensColor);
+}
+.cardProject h4 {
+  font-weight: 800;
+  padding: 5px;
+}
+.cardProject button {
+  width: 100px;
+  padding: 9px;
+  margin: 0px 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 800;
+}
+#githubBtnCard {
+  background-color: transparent;
+  border: none;
+  transition: 0.6;
+}
+#githubBtnCard a {
+  color: var(--backgroundItensColor);
+  transition: 0.6s;
+}
+#githubBtnCard:hover {
+  background-color: var(--backgroundItensColor);
+}
+#githubBtnCard:hover a {
+  color: var(--defaultColor);
+}
+#githubBtnCard:hover + #webBtnCard {
+  background-color: transparent;
+}
+#githubBtnCard:hover + #webBtnCard a {
+  color: var(--backgroundItensColor);
+}
+#webBtnCard {
+  border: none;
+  background-color: var(--backgroundItensColor);
+  transition: 1s;
+}
+#webBtnCard a {
+  color: var(--defaultColor);
+  transition: 1s;
+}
+section#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  width: 450px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+form input {
+  background-color: transparent;
+  color: var(--defaultColor);
+  border: 2px solid var(--defaultColor);
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  height: 50px;
+  grid-column: 1/3;
+}
+input#inputMensage {
+  height: 90px;
+}
+input::placeholder,
+:focus {
+  outline: 0;
+  color: var(--defaultColor);
+}
+form button {
+  width: 70%;
+  height: 50px;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: transparent;
+  color: var(--defaultColor);
+  border: 2px solid var(--defaultColor);
+}
+.boxEmail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  padding: 5px;
+  gap: 5px;
+  border-radius: 8px;
+  color: var(--backgroundItensColor);
+  background-color: var(--defaultColor);
+}
+.boxEmail p {
+  font-weight: 800;
+  font-size: 11px;
+}
+@media (max-width: 1079px) {
+  section#projects {
+    height: 150vh;
+  }
+}
+@media (max-width: 1005px) {
+  section {
+    padding: 40px;
+  }
+
+  .rectangles {
+    width: 400px;
+    height: 400px;
+  }
+
+  .alignDescription {
+    width: 380px;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 940px) {
+  section {
+    padding: 70px 20px;
+  }
+  section#projects {
+    height: 230vh;
+  }
+  section#aboutMe {
+    height: 160vh;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .rectangles {
+    margin-top: 40px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .rectangle {
+    width: 250px;
+    height: 250px;
+  }
+
+  .alignDescription {
+    grid-column: 1/1;
+    width: 380px;
+    grid-row: 3/4;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 546px) {
+  .alignDescription {
+    width: 350px;
+  }
+  section#myExperience {
+    padding: 70px 0px;
+  }
+  .containerBoxExperience .box {
+    width: 300px;
+  }
+  .cardsProjects {
+    width: 340px;
+  }
+  .cardProject {
+    width: 17rem;
+    height: 25rem;
+  }
+  form {
+    width: 300px;
+  }
+  form button {
+    width: 90%;
+  }
+  form .boxEmail {
+    width: 100%;
+  }
+}
