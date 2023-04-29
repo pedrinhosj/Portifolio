@@ -260,9 +260,10 @@ section#aboutMe h1 {
 .containerBoxExperience {
   margin-top: 20px;
   height: 100%;
-  display: grid;
-  place-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
 }
 .containerBoxExperience .box {
@@ -318,12 +319,13 @@ section#projects p {
   text-align: center;
 }
 .cardsProjects {
-  width: 80%;
+  width: 90%;
   height: 100%;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .cardProject {
   width: 20rem;
@@ -437,11 +439,11 @@ section#contact {
 form {
   width: 450px;
   height: 100%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   padding: 20px;
-  grid-template-columns: 1fr 1fr;
-  gap: 5px;
+  gap: 15px;
 }
 form input {
   background-color: transparent;
@@ -461,8 +463,16 @@ input::placeholder,
   outline: 0;
   color: var(--defaultColor);
 }
+form span {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 30%;
+  gap: 5px;
+}
+
 form button {
-  width: 70%;
+  width: 50%;
   height: 50px;
   border-radius: 8px;
   padding: 10px;
@@ -475,7 +485,7 @@ form button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 50%;
   height: 100%;
   padding: 5px;
   gap: 5px;
@@ -513,7 +523,7 @@ form button {
     padding: 70px 20px;
   }
   section#projects {
-    height: 230vh;
+    height: 250vh;
   }
   section#aboutMe {
     height: 160vh;
@@ -521,7 +531,6 @@ form button {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
   }
-
   .rectangles {
     margin-top: 40px;
     width: 250px;
@@ -550,6 +559,9 @@ form button {
   }
   .containerBoxExperience .box {
     width: 300px;
+  }
+  section#projects {
+    height: 250vh;
   }
   .cardsProjects {
     width: 340px;
