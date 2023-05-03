@@ -351,7 +351,7 @@ section#projects p {
 #imgCardTwo {
   background-position: center;
   background-size: cover;
-  background-image: url(./img/Captura\ de\ tela\ 2023-04-25\ 192215.png);
+  background-image: url(./img/Opera\ Instantâneo_2023-05-02_174702_pedrinhosj.github.io.png);
 }
 .imgCard .hoverDescription {
   position: absolute;
@@ -367,6 +367,12 @@ section#projects p {
   flex-direction: column;
   justify-content: space-between;
 }
+
+#imgCardTwo .hoverDescription p,
+#imgCardTwo .hoverDescription .usedLanguages i {
+  color: rgba(255, 255, 255, 0.676);
+}
+
 .imgCard:hover .hoverDescription {
   top: 0;
 }
