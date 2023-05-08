@@ -137,7 +137,7 @@ section#home {
   font-weight: 100;
   opacity: 0.5;
   border-right: 4px solid var(--defaultColor);
-  width: 19.5ch;
+  width: 21ch;
   white-space: nowrap;
   overflow: hidden;
   animation: typing 3s steps(20), blinking 0.5s infinite step-end alternate;
