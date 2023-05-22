@@ -6,15 +6,15 @@ document.addEventListener("scroll", () => {
     el.classList.remove("actived");
   });
 
-  if (scroll < 570) {
+  if (scroll < 500) {
     document.querySelector("a[href='#home']").classList.add("actived");
-  } else if (scroll > 570 && scroll < 1141) {
+  } else if (scroll > 500 && scroll < 1000) {
     document.querySelector("a[href='#aboutMe']").classList.add("actived");
-  } else if (scroll > 1141 && scroll < 1712) {
+  } else if (scroll > 1000 && scroll < 1500) {
     document.querySelector("a[href='#myExperience']").classList.add("actived");
-  } else if (scroll > 1712 && scroll < 2540) {
+  } else if (scroll > 1500 && scroll < 2300) {
     document.querySelector("a[href='#projects']").classList.add("actived");
-  } else if (scroll > 2540) {
+  } else if (scroll > 2300) {
     document.querySelector("a[href='#contact']").classList.add("actived");
   }
 });

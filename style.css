@@ -129,15 +129,15 @@ section#home {
   padding-left: 2px;
 }
 .myName h1 {
-  font-size: 70px;
+  font-size: 60px;
 }
 .descriptionHome {
-  margin: 20px 0 0 0;
+  margin: 10px 0;
   font-size: 20px;
   font-weight: 100;
   opacity: 0.5;
   border-right: 4px solid var(--defaultColor);
-  width: 21ch;
+  width: 19.5ch;
   white-space: nowrap;
   overflow: hidden;
   animation: typing 3s steps(20), blinking 0.5s infinite step-end alternate;
@@ -159,7 +159,6 @@ section#home {
   min-width: 200px;
   display: flex;
   justify-content: space-around;
-  margin: 20px;
 }
 .socialIcons a {
   display: flex;
@@ -308,7 +307,8 @@ section#projects {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 150vh;
+  height: 160vh;
+  padding: 90px;
 }
 section#projects > p {
   padding: 0px 0 15px 0px;
@@ -353,6 +353,10 @@ section#projects p {
   background-size: cover;
   background-image: url(./img/Opera\ Instantâneo_2023-05-02_174702_pedrinhosj.github.io.png);
 }
+#imgCardThree {
+  background-image: url(./img/Opera\ Instantâneo_2023-05-22_163646_pedrinhosj.github.io.png);
+  background-size: cover;
+}
 .imgCard .hoverDescription {
   position: absolute;
   width: 100%;
@@ -369,7 +373,9 @@ section#projects p {
 }
 
 #imgCardTwo .hoverDescription p,
-#imgCardTwo .hoverDescription .usedLanguages i {
+#imgCardTwo .hoverDescription .usedLanguages i,
+#imgCardThree .hoverDescription p,
+#imgCardThree .hoverDescription .usedLanguages i {
   color: rgba(255, 255, 255, 0.676);
 }
 
@@ -503,11 +509,7 @@ form button {
   font-weight: 800;
   font-size: 11px;
 }
-@media (max-width: 1079px) {
-  section#projects {
-    height: 150vh;
-  }
-}
+
 @media (max-width: 1005px) {
   section {
     padding: 40px;
